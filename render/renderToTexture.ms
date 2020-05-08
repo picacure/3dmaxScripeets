@@ -61,12 +61,15 @@ theMap = cellular cellColor:blue divColor1:red divColor2:yellow size:15
 theObject.material = standard diffusemap:theMap
 --Call the Bake function with the object and the desired size
 BakeDiffuseAndLighting theObject 256
+
 --Create a mappedplaneobjecton theground plane
 theObject = Plane width:200 length:200 mapcoords:true
 --Create a checker map and set the tiling to 4x4, then assign to object
 theMap = checker Color1:green Color2:orange
 theMap.coordinates.uTiling = theMap.coordinates.vTiling = 4
 theObject.material = standard diffusemap:theMap
+
+
 --Call the Bake function with the object and the desired size
 BakeDiffuseAndLighting theObject 256
 --Delete the light from the scene and deselect everything
